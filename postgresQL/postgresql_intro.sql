@@ -12,7 +12,7 @@ CREATE DATABASE owners_pets
     CONNECTION LIMIT = -1;
 	
 	
-CREATE TABLE owners_pets (
+CREATE TABLE owners (
 	id SERIAL PRIMARY KEY,
 	first_name VARCHAR(30),
 	last_name VARCHAR(30) NOT NULL,
@@ -25,11 +25,11 @@ CREATE TABLE pets (
 	species VARCHAR(30),
 	full_name VARCHAR(30),
 	age INT NOT NULL,
-	owner_id INT REFERENCES owners_pets (id)
+	owner_id INT REFERENCES owners (id)
 );
 
-ALTER TABLE owners_pets
+ALTER TABLE owners
 	ADD COLUMN email VARCHAR(50) UNIQUE,
 	ALTER COLUMN last_name TYPE VARCHAR(50);
 	
-SELECT * FROM owners_pets;
+SELECT * FROM owners;
