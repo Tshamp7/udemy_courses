@@ -10,7 +10,7 @@ SELECT first_name, last_name, date_of_birth FROM actors;
 -- as any british actors.
 
 SELECT first_name FROM actors
-WHERE first_name IS NOT NULL
+WHERE first_name IS NOT NULL AND gender = 'M'
 EXCEPT
 SELECT first_name FROM directors
 WHERE nationality = 'British';
