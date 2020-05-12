@@ -1,0 +1,17 @@
+/*
+
+INNER JOIN
+Returns rows of data with matching values in both tables. 
+
+LEFT JOIN
+Will return all the rows of data in the first table and only matching rows of data
+in the second table. 
+
+RIGHT JOIN
+Will return all rows of data in the second table and only matching rows of data 
+in the second table.
+
+FULL JOIN
+Will return all rows of data in both related tables.
+
+*/
