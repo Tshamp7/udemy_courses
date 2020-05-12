@@ -12,6 +12,7 @@ ORDER BY date_of_birth;
 -- Order the results by last name.
 
 SELECT ac.first_name, ac.last_name, ac.date_of_birth FROM actors ac
+WHERE date_of_birth BETWEEN '1960-01-01' AND '1969-12-31'
 UNION ALL
 SELECT dr.first_name, dr.last_name, dr.date_of_birth FROM directors dr
 WHERE date_of_birth BETWEEN '1960-01-01' AND '1969-12-31'
