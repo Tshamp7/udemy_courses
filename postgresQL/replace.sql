@@ -1,13 +1,15 @@
--- substring function
+-- REPLACE function
 
 /* 
-NOTE: the positions used in this function are NOT index positions, they are char
-positions.
+SELECT REPLACE('source_string', 'old_string', 'new_string')
 
-SELECT SUBSTRING('String', from, count)
+SELECT REPLACE('columname', 'old_string', 'new_string')
 
-SELECT SUBSTRING(columname, from, count) FROM tablename;
+UPDATE tablename
+SELECT REPLACE('columname', 'old_string', 'new_string')
+WHERE columname = 'value';
 */
 
--- The following query will return the first three letters of each actors first name.
-SELECT SUBSTRING(first_name, 1, 3) FROM actors;
+SELECT REPLACE(' a cat plays with a cat', 'cat', 'dog');
+
+-- The above query will return 'a dog plays with another dog'
