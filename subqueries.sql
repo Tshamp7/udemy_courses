@@ -33,3 +33,15 @@ WHERE date_of_birth > (
 -- It can also be helpful to run your inner query first seperately,
 -- this will help to make sure you get the correct return from the inner query.
 
+SELECT movie_name FROM movies
+WHERE movie_id IN (
+SELECT movie_id FROM movie_revenues
+WHERE international_takings > domestic_takings
+	);
+	
+	SELECT mo.movie_name, dr.first_name, dr.last_name FROM movies mo
+JOIN directors dr ON mo.director_id = dr.director_id
+WHERE mo.movie_id IN (
+SELECT movie_id FROM movie_revenues
+WHERE international_takings > domestic_takings
+	);
